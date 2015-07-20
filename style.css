@@ -35,9 +35,11 @@ input, select, form, ul {
 	margin: auto;
 	margin-top: 10px;
 }
+
 .friends li {
 	font-size: 14px;
 }
+
 .friends li div{
 	margin-bottom: 7px;
 }
