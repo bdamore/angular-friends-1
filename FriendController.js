@@ -2,12 +2,16 @@
 
 app.controller('mainCtrl', function($scope) {
 
-  $scope.sort;
-
-  $scope.order;
+  $scope.filterOptions = [
+    {value: 'name', label: 'Name'},
+    {value: 'friend_count', label: 'Friends'},
+    {value: 'current_location.city', label: 'City'},
+    {value: 'current_location.state', label: 'State'},
+    {value: 'current_location.country.', label: 'Country'}
+  ];
 
   $scope.friends = [
-  	  {
+	  {
 	    "name": "Preston McNeil",
 	    "pic_square": "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1117694_1614542_108355616_q.jpg",
 	    "current_location": {
@@ -158,7 +162,7 @@ app.controller('mainCtrl', function($scope) {
 	  },
 	  {
 	    "name": "John Dohyung Kwon",
-	    "pic_square": "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/1117694_1614542_108355616_q.jpg",
+	    "pic_square": "https://fbcdn-profile-a.akamaihd.net/static-ak/rsrc.php/v2/yo/r/UlIqmHJn-SK.gif",
 	    "current_location": null,
 	    "status": null,
 	    "friend_count": 79,
@@ -439,5 +443,10 @@ app.controller('mainCtrl', function($scope) {
 	  }
   ];
 
+  $scope.searchTerm;
+
+  $scope.sort;
+
+  $scope.order;
 
 });

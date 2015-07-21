@@ -18,17 +18,19 @@
     
       <form class="form-inline searchForm" role="form">
         <div class="form-group">
+
+          <input class="form-control" placeholder="Search Your Friend's Name" ng-model="searchTerm.name">
+          <input class="form-control" placeholder="Search Your Friend's Location" ng-model="searchTerm.current_location">
             
-          <input class="form-control" placeholder="Search for name" ng-model="searchTerm.name">
-          <input class="form-control" placeholder="Search for location" ng-model="searchTerm.current_location">
-            
-          <select class="input-medium" ng-model="sort">
+          <!-- <select class="input-medium" ng-model="sort">
             <option value="name">Name</option>  
             <option value="friend_count"># friends</option>
             <option value="current_location.city">City</option>
             <option value="current_location.state">State</option>
             <option value="current_location.country">Country</option>
-          </select>
+          </select> -->
+
+          <select class="input-medium" ng-model="sort" ng-options="list.value as list.label for list in filterOptions"></select>
 
           <select class="input-medium" ng-model="order">
             <option value="true">Descending</option>
@@ -40,7 +42,7 @@
 
       <ul>
         <li class='friend' ng-repeat="friend in friends | filter:searchTerm | orderBy: sort : order">
-          <img class="profile-pic" src="{{friend.pic_square}}">
+          <img class="profile-pic" ng-src="{{friend.pic_square}}">
 
           <h3>{{friend.name}}</h3>
 
