@@ -18,14 +18,10 @@
     
       <form class="form-inline searchForm" role="form">
         <div class="form-group">
-
-          <input class="form-control" placeholder="Search Anything About Your Friends" data-ng-model="searchTerm">
-          <!-- STEP 5: Get rid of the one above when you uncomment the below-->
-            <!--
-          <input class="form-control" placeholder="Search Name">
-          <input class="form-control" placeholder="Search Location">
-            -->
-
+            
+          <input class="form-control" placeholder="Search for name" data-ng-model="searchTerm.name">
+          <input class="form-control" placeholder="Search for location" data-ng-model="searchTerm.current_location">
+            
           <select class="input-medium">
             <option>Name</option>
             <option>#Friends</option>
