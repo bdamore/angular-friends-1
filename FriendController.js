@@ -2,6 +2,10 @@
 
 app.controller('mainCtrl', function($scope) {
 
+  $scope.sort;
+
+  $scope.order;
+
   $scope.friends = [
   	  {
 	    "name": "Preston McNeil",
